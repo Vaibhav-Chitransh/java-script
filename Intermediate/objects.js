@@ -57,3 +57,51 @@ const regularUser = {
 console.log(regularUser.fullName);
 console.log(regularUser.fullName.userFullName);
 console.log(regularUser.fullName.userFullName.firstName);
+
+const obj1 = {
+    1: 'a',
+    2: 'b'
+}
+
+const obj2 = {
+    3: 'c',
+    4: 'd'
+}
+
+const obj3 = {obj1, obj2};
+console.log(obj3);
+
+const obj4 = Object.assign({}, obj1, obj2);
+console.log(obj4);
+
+const obj5 = {...obj1, ...obj2};
+console.log(obj5);
+
+console.log(Object.keys(obj5));  // returns array of keys
+console.log(Object.values(obj5)); // returns array of values
+console.log(Object.entries(obj5)); // returns array of array
+
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// Destructuring 
+const course = {
+    courseName: 'Data Structures',
+    coursePrice: 'Free',
+    courseInstructor: 'Vaibhav Chitransh'
+}
+
+const {courseInstructor: instructor} = course;
+console.log(instructor);
+
+// Json 
+{
+    "name": "Vaibhav",
+    "courseName": 'MERN Stack',
+    "price": 'free'
+}
+
+[
+    {},
+    {},
+    {}
+]
